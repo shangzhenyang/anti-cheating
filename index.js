@@ -10,12 +10,16 @@
 	let logCount = 0;
 	let titleInterval;
 
+	function addZero(num, length) {
+		return (Array(length).join("0") + (num || 0)).slice(-length);
+	}
+
 	function getCurrentTime() {
 		const now = new Date();
 		return [
-			now.getHours(),
-			now.getMinutes(),
-			now.getSeconds()
+			addZero(now.getHours(), 2),
+			addZero(now.getMinutes(), 2),
+			addZero(now.getSeconds(), 2)
 		].join(":");
 	}
 
