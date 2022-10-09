@@ -5,6 +5,7 @@
 	let hasCheated = false;
 	let idleInterval;
 	let idleSeconds = 0;
+	let latestStatus;
 	let logCount = 0;
 	let titleInterval;
 
@@ -26,8 +27,7 @@
 		}, 1000);
 		if (log) {
 			logCount++;
-			let action = currentStatus.innerText;
-			logBox.innerText = logCount + ". " + action + "\n" + logBox.innerText;
+			logBox.innerText = logCount + ". " + latestStatus + "\n" + logBox.innerText;
 		}
 	}
 
@@ -36,8 +36,9 @@
 			hasCheated = true;
 			text = "⚠️ CHEATING DETECTED: " + text;
 		}
+		latestStatus = "[" + getCurrentTime() + "] " + text;
 		if (!hasCheated || isCheating) {
-			currentStatus.innerText = "[" + getCurrentTime() + "] " + text;
+			currentStatus.innerText = latestStatus;
 		}
 	}
 
