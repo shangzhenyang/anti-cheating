@@ -1,6 +1,7 @@
 (() => {
 	const currentStatus = document.getElementById("current-status");
 	const logBox = document.getElementById("log-box");
+	const question = document.getElementById("question");
 
 	let hasCheated = false;
 	let idleInterval;
@@ -108,12 +109,24 @@
 	};
 
 	document.oncopy = () => {
-		updateStatus("Copied Data: " + getSelection().toString(), true);
+		updateStatus("Copied Data: " + getSelection().toString());
+		onEvent(true);
+	};
+
+	question.oncopy = evt => {
+		evt.stopPropagation();
+		updateStatus("Copied the Question: " + getSelection().toString(), true);
 		onEvent(true);
 	};
 
 	document.oncut = () => {
-		updateStatus("Cut Data", true);
+		updateStatus("Cut Data: " + getSelection().toString());
+		onEvent(true);
+	};
+
+	question.oncut = evt => {
+		evt.stopPropagation();
+		updateStatus("Cut the Question: " + getSelection().toString(), true);
 		onEvent(true);
 	};
 
