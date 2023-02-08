@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="author" content="Shangzhen Yang">
-	<meta name="description" content="This web page demonstrates most of the actions that a web page can detect to tell if someone cheating.">
-	<meta name="viewport" content="width=device-width">
-	<title>Anti-Cheating Demo</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-</head>
-
-<body>
-	<h1>Anti-Cheating Demo</h1>
-	<p id="current-status"></p>
-	<fieldset>
-		<legend>Example Question</legend>
-		<div id="question">Pretending this text is a question. You can try copying this text, printing this page, and so on.</div>
-	</fieldset>
-	<fieldset>
-		<legend><label for="Answer">Answer</label></legend>
-		<textarea id="answer" placeholder="Type or paste anything here"></textarea>
-	</fieldset>
-	<fieldset>
-		<legend>Video View</legend>
-		<div>
-			<button id="camera-btn">Camera</button>
-			<button id="share-screen-btn">Share Screen</button>
-		</div>
-		<div>
-			<video id="camera" height="240" autoplay></video>
-			<video id="screen-view" height="240" autoplay></video>
-		</div>
-	</fieldset>
-	<fieldset>
-		<legend>Log</legend>
-		<div id="log-box"></div>
-	</fieldset>
-	<footer>&copy; 2022 Shangzhen Yang</footer>
-	<script src="index.js"></script>
-</body>
-
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Shangzhen Yang">
+		<meta name="description" content="This web page demonstrates most of the actions that a web page can detect to tell if someone cheating.">
+		<meta name="viewport" content="width=device-width">
+		<title>Anti-Cheating Demo</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+	</head>
+	<body>
+		<h1>Anti-Cheating Demo</h1>
+		<p id="current-status"></p>
+		<fieldset>
+			<legend>Example Question</legend>
+			<div id="question">Pretending this text is a question. You can try copying this text, printing this page, and so on.</div>
+		</fieldset>
+		<fieldset>
+			<legend><label for="Answer">Answer</label></legend>
+			<textarea id="answer" placeholder="Type or paste anything here"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Video View</legend>
+			<div>
+				<button id="camera-btn">Camera</button>
+				<button id="share-screen-btn">Share Screen</button>
+			</div>
+			<div>
+				<video id="camera" height="240" autoplay></video>
+				<video id="screen-view" height="240" autoplay></video>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Log</legend>
+			<div id="log-box"></div>
+		</fieldset>
+		<footer>&copy; 2023 Shangzhen Yang</footer>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
 </html>
