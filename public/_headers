@@ -1,0 +1,5 @@
+/*
+	Content-Security-Policy: default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src https://assets.retiehe.com; script-src 'self'; style-src https://cdn.jsdelivr.net
+
+/assets/*
+	Cache-Control: public, max-age=31536000, immutable
